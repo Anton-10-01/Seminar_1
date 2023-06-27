@@ -6,12 +6,16 @@ Console.Write("Введи число: ");
 string numberStr = Console.ReadLine();
 int number = Convert.ToInt32(numberStr);
 int count = 1;
-if (number > 1) {
-while (count <= number) {
-    if (count % 2 == 0) Console.Write(count);
-    if (count % 2 != 0 && count != 1 && count < number) Console.Write(", ");
-    count++;
-}
+if (number > 0) { 
+    if (number == 1) {
+        Console.WriteLine("Нет четных чисел!");
+    } else {
+        while (count <= number) {
+            if (count % 2 == 0) Console.Write(count);
+            if (count % 2 != 0 && count != 1 && count < number) Console.Write(", ");
+            count++;
+        }
+    }
 } else {
     Console.WriteLine("Необходимо ввести число больше 0!");
 }
