@@ -6,12 +6,19 @@
 Console.Write("Введи число a: ");
 string a1 = Console.ReadLine();
 int a = Convert.ToInt32(a1);
+
 Console.Write("Введи число b: ");
 string b1 = Console.ReadLine();
 int b = Convert.ToInt32(b1);
+
 Console.Write("Введи число c: ");
 string c1 = Console.ReadLine();
 int c = Convert.ToInt32(c1);
-if (a > b && a > c) Console.WriteLine(a);
-if (b > a && b > c) Console.WriteLine(b);
-if (c > a && c > b) Console.WriteLine(c);
+
+//int count = 0;
+int max = a;
+
+if (max < b) max = b;
+if (max < c) max = c;
+
+Console.Write(max);
